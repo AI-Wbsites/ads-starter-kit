@@ -1,0 +1,15 @@
+/*
+Theme Name:   {{THEME_NAME}}
+Theme URI:    {{SITE_URL}}
+Author:       Amila Upathissa
+Author URI:   https://amila.info
+Description:  Custom WordPress theme for {{CLIENT_NAME}}. Bundles custom Elementor widgets under the "{{WIDGET_CATEGORY_NAME}}" category. Built from an Astro prototype.
+Version:      0.1.0
+Requires at least: 6.5
+Requires PHP: 8.2
+License:      Proprietary
+Text Domain:  {{THEME_TEXT_DOMAIN}}
+Tags:         elementor, custom
+*/
+
+/* Global styles are loaded from assets/css/theme.css via functions.php. */

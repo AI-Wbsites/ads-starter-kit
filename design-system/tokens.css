@@ -1,0 +1,83 @@
+/* =============================================================
+   Design tokens — single source of truth
+   Edit values here; the whole site updates.
+   Keep in sync with wordpress-theme/assets/css/tokens.css
+   ============================================================= */
+
+:root {
+  /* ---------- Raw colour palette (neutrals) ---------- */
+  --color-neutral-0:   #ffffff;
+  --color-neutral-50:  #f8f8f8;
+  --color-neutral-100: #eeeeee;
+  --color-neutral-200: #d9d9d9;
+  --color-neutral-300: #b8b8b8;
+  --color-neutral-500: #6b6b6b;
+  --color-neutral-700: #333333;
+  --color-neutral-900: #111111;
+  --color-neutral-1000:#000000;
+
+  /* ---------- Raw colour palette (brand) ---------- */
+  /* Replace per project */
+  --color-brand-500: #2b6cff;
+  --color-brand-600: #1b52d6;
+  --color-accent-500: #ff5a3c;
+
+  /* ---------- Semantic colours ---------- */
+  --color-bg:           var(--color-neutral-0);
+  --color-bg-alt:       var(--color-neutral-50);
+  --color-surface:      var(--color-neutral-0);
+  --color-border:       var(--color-neutral-200);
+  --color-text:         var(--color-neutral-900);
+  --color-text-muted:   var(--color-neutral-500);
+  --color-text-invert:  var(--color-neutral-0);
+  --color-primary:      var(--color-brand-500);
+  --color-primary-hover:var(--color-brand-600);
+  --color-accent:       var(--color-accent-500);
+  --color-focus-ring:   var(--color-brand-500);
+
+  /* ---------- Spacing scale (rem) ---------- */
+  --space-0:   0;
+  --space-1:   0.25rem;   /* 4px  */
+  --space-2:   0.5rem;    /* 8px  */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.5rem;    /* 24px */
+  --space-6:   2rem;      /* 32px */
+  --space-7:   3rem;      /* 48px */
+  --space-8:   4rem;      /* 64px */
+  --space-9:   6rem;      /* 96px */
+  --space-10:  8rem;      /* 128px*/
+
+  /* ---------- Layout ---------- */
+  --container-max:    72rem;      /* 1152px */
+  --container-pad:    var(--space-5);
+  --section-pad-y:    var(--space-8);
+
+  /* ---------- Radii ---------- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.12);
+
+  /* ---------- Borders ---------- */
+  --border-width: 1px;
+  --border-default: var(--border-width) solid var(--color-border);
+
+  /* ---------- Z-index scale ---------- */
+  --z-base: 1;
+  --z-nav: 100;
+  --z-modal: 1000;
+  --z-toast: 2000;
+
+  /* ---------- Breakpoints (for JS reference; CSS uses media queries directly) ---------- */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+}

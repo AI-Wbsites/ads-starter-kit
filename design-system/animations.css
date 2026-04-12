@@ -1,0 +1,38 @@
+/* =============================================================
+   Motion tokens
+   Shared between CSS transitions and GSAP.
+   In GSAP, read these with getComputedStyle().getPropertyValue().
+   ============================================================= */
+
+:root {
+  /* ---------- Durations (seconds for GSAP, ms for CSS) ---------- */
+  --duration-instant: 0.1s;
+  --duration-fast:    0.2s;
+  --duration-base:    0.35s;
+  --duration-slow:    0.6s;
+  --duration-slower:  1s;
+
+  /* GSAP-friendly numeric versions (unitless seconds) */
+  --duration-fast-s:    0.2;
+  --duration-base-s:    0.35;
+  --duration-slow-s:    0.6;
+
+  /* ---------- Easing curves ---------- */
+  --ease-standard:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:        cubic-bezier(0, 0, 0.2, 1);
+  --ease-in:         cubic-bezier(0.4, 0, 1, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --ease-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* GSAP ease names equivalent to the above curves, for convenience */
+  /* standard ≈ "power2.inOut"  |  emphasized ≈ "power3.out"  |  spring ≈ "back.out(1.7)" */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

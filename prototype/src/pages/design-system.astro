@@ -1,0 +1,58 @@
+---
+/*
+ * Live design-system page. Route: /design-system
+ * Add imports here as you build real components — this is the authoritative
+ * component gallery for the prototype. Tokens are already previewed in
+ * /design-system/preview.html.
+ */
+import Base from "../layouts/Base.astro";
+
+// As components are built, import them here and add a <section> below.
+// Example:
+//   import Hero from "../components/Hero.astro";
+//   import FeatureCard from "../components/FeatureCard.astro";
+---
+
+<Base title="Design system — {{CLIENT_NAME}}">
+  <main class="container section">
+    <header>
+      <h1>Design system</h1>
+      <p>
+        Live gallery of every component in the prototype. Token-level preview
+        lives at <a href="/design-system/preview.html">design-system/preview.html</a>.
+      </p>
+    </header>
+
+    <section class="block">
+      <h2>Components</h2>
+      <p class="muted">
+        Nothing yet. Add components to <code>src/components/</code>, then import
+        them at the top of this file and showcase each in its own
+        <code>&lt;section&gt;</code> below with example props.
+      </p>
+      <!--
+        Example:
+        <section>
+          <h3>Hero</h3>
+          <Hero title="Example title" subtitle="Example subtitle" />
+        </section>
+      -->
+    </section>
+  </main>
+</Base>
+
+<style>
+  main { display: grid; gap: var(--space-7); }
+  header h1 { font-size: var(--font-size-4xl); margin: 0 0 var(--space-2); }
+  header p  { color: var(--color-text-muted); }
+  .block { display: grid; gap: var(--space-4); }
+  h2 { font-size: var(--font-size-2xl); margin: 0; }
+  .muted { color: var(--color-text-muted); }
+  code {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    background: var(--color-bg-alt);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+  }
+</style>

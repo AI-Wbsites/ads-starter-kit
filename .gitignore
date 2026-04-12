@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*
+!.env.example
+
+# Astro
+prototype/dist/
+prototype/.astro/
+prototype/.output/
+
+# Logs
+*.log
+
+# Cloudflare
+.wrangler/
+
+# WordPress — nothing to ignore here since the theme is tracked
