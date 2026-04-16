@@ -62,6 +62,12 @@ Run `./init.sh` from the repo root to prompt for these and stamp the repo in one
 
 Theme author is always **Amila Upathissa**, URI **https://amila.info** — never change those.
 
+## Sync to a live WordPress install
+
+`tool/sync-wordpress.sh` watches `wordpress-theme/` with `inotifywait` and mirrors it to the destination in `tool/.sync-dest` via `rsync --delete`. The destination is captured by `init.sh` (blank skips it) and can be edited later by hand.
+
+When Amila says **"sync wordpress dir"** (or similar), run `./tool/sync-wordpress.sh` in the foreground — it's a long-running watcher, not a one-shot.
+
 ## Folder-specific guidance
 
 Each top-level folder has its own `CLAUDE.md` with scope-specific rules:

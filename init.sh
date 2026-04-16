@@ -74,6 +74,11 @@ WIDGET_CATEGORY_SLUG="$(to_slug "$WIDGET_CATEGORY_SLUG")"
 prompt SITE_URL             "Site URL (leave blank if unknown)"                   "https://example.com"
 
 echo
+echo "tool/sync-wordpress.sh mirrors wordpress-theme/ to a live WP install."
+echo "Leave blank to configure later by editing tool/.sync-dest."
+read -r -p "WordPress theme destination (local path or user@host:/path): " WP_THEME_DEST
+
+echo
 echo "=== Review ==="
 cat <<EOF
   CLIENT_NAME          = $CLIENT_NAME
@@ -84,6 +89,7 @@ cat <<EOF
   WIDGET_CATEGORY_NAME = $WIDGET_CATEGORY_NAME
   WIDGET_CATEGORY_SLUG = $WIDGET_CATEGORY_SLUG
   SITE_URL             = $SITE_URL
+  WP_THEME_DEST        = ${WP_THEME_DEST:-<not set>}
 EOF
 echo
 read -r -p "Apply these values to every file? [y/N] " reply
@@ -133,6 +139,14 @@ replace_in_tree '{{THEME_CONST_PREFIX}}'   "$THEME_CONST_PREFIX"
 replace_in_tree '{{WIDGET_CATEGORY_NAME}}' "$WIDGET_CATEGORY_NAME"
 replace_in_tree '{{WIDGET_CATEGORY_SLUG}}' "$WIDGET_CATEGORY_SLUG"
 replace_in_tree '{{SITE_URL}}'             "$SITE_URL"
+
+# --- Sync destination --------------------------------------------------------
+
+if [ -n "${WP_THEME_DEST:-}" ]; then
+  mkdir -p tool
+  printf '%s\n' "$WP_THEME_DEST" > tool/.sync-dest
+  echo "✓ Wrote sync destination to tool/.sync-dest"
+fi
 
 echo "✓ Done."
 echo

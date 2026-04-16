@@ -28,3 +28,6 @@ prototype/.output/
 .wrangler/
 
 # WordPress — nothing to ignore here since the theme is tracked
+
+# Sync tool — destination is per-machine
+tool/.sync-dest
